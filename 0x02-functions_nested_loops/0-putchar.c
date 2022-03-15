@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include "main.h"
-/*
+/**
+ * main - starting point
  *
- * Return: Always 0 (Success)
+ * Return: return 0 if successful
  */
 int main(void)
 {
@@ -15,6 +16,5 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
-
 	return (0);
 }
