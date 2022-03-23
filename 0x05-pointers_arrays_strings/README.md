@@ -1,3 +1,92 @@
+---POINTERS AND ARRAYS---
+
+Every time you declare a variable, the computer will reserve memory for this variable. 
+The memory reserved will then store the value of the variable.
+
+Depending on the type of the variable, the computer will reserve more or less memory.
+
+Here are the sizes of the most common types on most 64-bit Linux machines:
+
+	char -> 1 byte /*1 byte =8 bits*/
+	int ->4 bytes
+	float -> 4 bytes
+
+We can sizeoff can be used to find size of a variable
+
+	#include<stdio.h>
+	/**
+	 * 
+	 * Main - size of char, int and float
+	 * 
+	 * Return - Always return 0
+	 * 
+	 */
+	 int main(void)
+	 {
+	   int n;
+	   int p;
+	   printf("Size of 'char' is: %lu bytes\n",sizeof(char));
+	   printf("Size of 'int' is: %lu bytes\n",sizeof(int));
+	   printf("Size of 'float' is: %lu bytes \n", sizeof(float));
+	   return(0);
+	 }
+
+
+When we declare a variable, the computer will reserve the right amount of space for the variable in the memory (depending on its type). 
+The space reserved for the variable is its address. And when we assign a value to this variable, the computer will store this value at 
+its address.
+
+One does not control the address where the variable is stored. In order to know what is the address of a variable, 
+you can use the “address-of unary operator” &
+
+	#include<stdio.h>
+	/**
+	 * Main - Address of variables
+	 * 
+	 * Return - Always return 0
+	 * 
+	 */
+	 int main(void)
+	 {
+	   char c;
+	   int n;
+	   
+	   printf("The address of variable 'c' is: %p\n", &c);
+	   printf("The address of variable 'n' is: %p\n", &n);
+	   return(0);
+	   
+	 }
+
+NOTE: You can use %p to print addresses (the values of pointers) with printf
+
+
+---STORING MEMORY ADDRESSES---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 1. Write a function that takes a pointer to an int as parameter and updates the value it points to to 98.
 	Prototype: void reset_to_98(int *n);
 

@@ -1,0 +1,144 @@
+POINTERS AND ARRAYS
+
+ A computer reserves a memory for each variable declared
+
+for a 64-bit Linux machine
+
+	char -> 1 byte   # 1 byte = 8 bits
+	int -> 4 bytes
+	float -> 4 bytes
+
+Sizeof operator
+
+	#include<stdio.h>
+	int main(void)
+	{
+	  printf("Size of integer is: %lu bytes\n",sizeof(int));
+	  printf("Size of float is: %lu bytes\n", sizeof(float));
+	  printf("Size of Char is: %lu byte\n", sizeof(char));
+	  return (0);
+	}
+
+When we declare a variable, the computer will reserve the right amount of space for the variable in the memory (depending on its type). 
+The space reserved for the variable is its address. And when we assign a value to this variable, the computer will store this value at 
+its address.
+
+One does not control the address where the variable is stored. In order to know what is the address of a variable, you can use the 
+“address-of unary operator” &
+
+	#include <stdio.h>
+	/**
+	 * main - address of variables
+	 * 
+	 * Return - Always 0
+	 * 
+	 */
+	 
+	 int main(void)
+	 {
+	   char c;
+	   int n;
+	   
+	   printf("The address of char c is: %p \n", &c);
+	   printf("The address of int n is: %p\n", &n);
+	   return(0);
+	 } 
+
+Note: You can use %p to print addresses (the values of pointers) with printf
+
+
+
+----STORING MEMORY ADDRESSES---
+
+	var_type *var;
+
+	-The * tells that the variable var is a pointer…
+	… that points to a var_type.
+	The value of var will be a memory address holding a value of type var_type
+
+
+	int *ptr;     /*ptr is a pointer to int */
+	char *ptr;    /*ptr is a pointer to char */
+
+Because a pointer is like any other variable, the computer will also reserve the right amount of memory for it to store its value. 
+On most 64 bits machines, the size of pointers is 8 bytes.
+
+	#include<stdio.h>
+	/**
+	 * 
+	 * Main - size of pointers in bytes
+	 * 
+	 * return - Always 0
+	 * 
+	 */
+	 int main(void)
+	 {
+	   int *p;
+	   printf("Size of pointer:%lu bytes \n",sizeof(p));
+	   return(0);
+	 }
+
+To get the address where a pointer is stored, you can use the same technique as for any other variable: use the & operator.
+
+	#include<stdio.h>
+	/**
+	 * Main - Print address ofa pointer
+	 * 
+	 * Return - Always 0
+	 * 
+	 */
+	 
+	 int main(void)
+	 {
+	   int *p;
+	   printf("The address of a pointer 'p' is: %p\n",&p);
+	   return(0);
+	   
+	 }
+
+
+
+	int n;
+	int *p; 
+
+	n = 98;
+	p = &n;
+
+Because &n gives us the address of the variable n, the variable p now holds the address of the variable n: p points to n. 
+If the variable n’s address were 26, then the value of our pointer p would be 26.
+
+
+---DEFERENCING---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Write a function that takes a pointer to an int as parameter and updates the value it points to to 98.
+	Prototype: void reset_to_98(int *n);
+
+2. Write a function that swaps the values of two integers.
+	Prototype: void swap_int(int *a, int *b);
+
+3. Write a function that returns the length of a string.
+	Prototype: int _strlen(char *s); 
+
+4. Write a function that prints a string, followed by a new line, to stdout.
+	Prototype: void _puts(char *str);
+
+5. Write a function that prints a string, in reverse, followed by a new line.
+	Prototype: void print_rev(char *s); 
+
+6. Write a function that reverses a string.
+	Prototype: void rev_string(char *s);
+
+7. 
