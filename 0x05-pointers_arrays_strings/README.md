@@ -62,23 +62,63 @@ NOTE: You can use %p to print addresses (the values of pointers) with printf
 
 ---STORING MEMORY ADDRESSES---
 
+A pointer is simply the address of a piece of data in memory. A pointer variable is a variable that stores the address 
+of that piece of data. 
+
+	var_type *var;
+
+	The * tells that the variable var is a pointer that points to a var_type.
+
+	int *ptr; - /* ptr is the name of the variable, of type “pointer to an integer”*/ 
+
+	char *ptr2 - /* ptr2 is a pointer to a char */
+
+Because a pointer is like any other variable, the computer will also reserve the right amount of memory for it to store its value. 
+On most 64 bits machines, the size of pointers is 8 bytes.
+
+	#include<stdio.h>
+	/**
+	 * 
+	 * Main - size of pointers in bytes
+	 * 
+	 * Return - Always 0
+	 * 
+	 */
+	 int main(void)
+	 {
+	   int *p;
+	   printf("The size of pointer 'p' is: %lu\n", sizeof(p));
+	   return(0);
+	 }
 
 
+To get the address where a pointer is stored, you can use the same technique as for any other variable: use the & operator.
+
+	#include<stdio.h>
+	/**
+	 * Main - Address of pointers
+	 * 
+	 * Return - Always 0.
+	 * 
+	 */
+	 int main(void)
+	 {
+	   int *p;
+	   printf("Address of pointer 'p' is: %p\n",&p);
+	   return(0);
+	 }
+
+int n;
+int *p; 
+
+n = 98;
+p = &n;  
+
+Because &n gives us the address of the variable n, the variable p now holds the address of the variable n: p points to n. 
+If the variable n’s address were 26, then the value of our pointer p would be 26.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+---DEFERENCING---
 
 
 
