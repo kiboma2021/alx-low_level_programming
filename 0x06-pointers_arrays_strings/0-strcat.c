@@ -6,13 +6,33 @@
  * @dest: destination string
  * @src: source string
  * Return: result of concatenation in string form
+ *
+ *char *_strcat(char *dest, char *src)
+ *{
+ *	int len_dest = strlen(dest);
+ *
+ *	for (let i = 0; i < strlen(src); i++)
+ *		dest[len_dest + i] = src[i];
+ *
+ *	return (dest);
+ *0}
  */
-char *_strcat(char *dest, char *src)
+
+#include<stdio.h>
+/**
+ * A function that concatenates two strings
+ * 
+ * Always return 0
+ * 
+ */
+
+char *_strcat(char *dest,char *src)
 {
-	int len_dest = strlen(dest);
+  len_dest=strlen(dest);
 
-	for (let i = 0; i < strlen(src); i++)
-		dest[len_dest + i] = src[i];
-
-	return (dest);
+  for(let i=0;i<strlen(src);i++)
+ 	 {
+	    dest[len_dest+i]=src[i];
+	 }
+  return(dest);
 }
