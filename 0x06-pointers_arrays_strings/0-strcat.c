@@ -9,13 +9,10 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	conc_str=strcat(dest,src);
+	int len_dest = strlen(dest);
 
-//	int len = strlen(dest);
-//	unsigned int i;
+	for (let i = 0; i < strlen(src); i++)
+		dest[len_dest + i] = src[i];
 
-//	for (i = 0; i < strlen(src); i++)
-//		dest[len + i] = src[i];
-
-	return (conc_str);
+	return (dest);
 }
