@@ -59,6 +59,78 @@
 	-Prototype: char *_strncpy(char *dest, char *src, int n);
 	-Your function should work exactly like strncpy
 
+	#include "main.h"
+
+	/**
+	 * _strncpy - copies a string
+	 * @dest: destination string
+	 * @src: source string
+	 * @n: number of bytes to copy
+	 *
+	 * Return: pointer to the resulting string
+	 */
+	char *_strncpy(char *dest, char *src, int n)
+	{
+		int i;
+
+		i = 0;
+
+		while (src[i] != '\0' && i < n)
+		{
+			dest[i] = src[i];
+			i++;
+		}
+
+		while (i < n)
+		{
+			dest[i] = '\0';
+			i++;
+		}
+
+		return (dest);
+	}
+
+
+4. Write a function that compares two strings.
+
+	-Prototype: int _strcmp(char *s1, char *s2);
+	-Your function should work exactly like strcmp
+
+
+	#include "main.h"
+	#include <stdio.h>
+	/**
+	  * _strcmp - compare strings
+	  * @s1: para1
+	  * @s2: para2
+	  * Return: int
+	  */
+	int _strcmp(char *s1, char *s2)
+	{
+		int i;
+
+		i = 0;
+		while (s1[i] != '\0' && s2[i] != '\0')
+		{
+			if (s1[i] != s2[i])
+				return (s1[i] - s2[i]);
+			i++;
+		}
+		return (0);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
