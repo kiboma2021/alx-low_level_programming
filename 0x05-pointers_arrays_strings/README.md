@@ -120,6 +120,140 @@ If the variable n’s address were 26, then the value of our pointer p would be 
 
 ---DEFERENCING---
 
+The real power of pointers is that they can manipulate values stored at the memory address they point to. 
+This is called dereferencing. To do this, you can use the dereference operator *.
+
+	#include<stdio.h>
+	/**
+	 * 
+	 * Main - deferencing pointers
+	 * 
+	 * Return - Always 0;
+	 * 
+	 */
+	 
+	 int main(void)
+	 {
+	   int n;
+	   int *p;
+	   
+	   n=98;
+	   p=&n;
+	   
+	   printf("Value of 'n' is: %d\n", n);
+	   printf("Address of 'n' is: %p\n", &n);
+	   printf("value of 'p' is: %p\n",p);
+	   *p=402;
+	   printf("Value of 'n' is: %d\n",n);
+	   
+	   return(0);
+	 }
+
+	/*Output*/
+
+	Value of 'n' is: 98
+	Address of 'n' is: 0x7ffd7b7bbfec
+	value of 'p' is: 0x7ffd7b7bbfec
+	Value of 'n' is: 402
+
+int *p;: * is used in the declaration: p is a pointer to an integer, and so, after dereferencing, *p is an integer.
+
+p = &n;: & takes the address of n. So now p == &n, so *p == n
+
+
+	#include<stdio.h>
+	/**
+	 * 
+	 * Main - Deferencing pointers
+	 * 
+	 * Return - Always 0;
+	 * 
+	 */
+	 
+	 int main(void)
+	 {
+	   int n;
+	   int *p;
+	   char c;
+	   char *pp;
+
+	   c = 'H';
+	   pp = &c;
+	   n = 98;
+	   p = &n;
+	   printf("Value of 'c': %d ('%c')\n", c, c);
+	   printf("Address of 'c': %p\n", &c);
+	   printf("Value of 'pp': %p\n", pp);
+	   printf("Value of 'n': %d\n", n);
+	   printf("Address of 'n': %p\n", &n);
+	   printf("Value of 'p': %p\n", p);
+	   *p = 402;
+	   *pp = 'o';
+	   printf("Value of 'n': %d\n", n);
+	   printf("Value of '*pp': %d\n", *pp);
+	   printf("Value of 'c': %d ('%c')\n", c, c);
+	   printf("Value of '*pp': %d ('%c')\n", *pp, *pp);
+	   
+	   return (0);
+	 }
+
+
+
+	Output:
+
+	Value of 'c': 72 ('H')
+	Address of 'c': 0x7ffd471e4c13
+	Value of 'pp': 0x7ffd471e4c13
+	Value of 'n': 98
+	Address of 'n': 0x7ffd471e4c14
+	Value of 'p': 0x7ffd471e4c14
+	Value of 'n': 402
+	Value of '*pp': 111
+	Value of 'c': 111 ('o')
+	Value of '*pp': 111 ('o')
+
+
+Note that * has a different meaning depending on the context (declaring vs dereferencing pointers).
+
+at declaration, it is used to declare a variable of type pointer to something. Example: int *n;
+when used inside the code it is used to dereference pointers. Example *n = 98;
+
+
+----Functions parameters are passed by value----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
